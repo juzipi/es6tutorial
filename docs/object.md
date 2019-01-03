@@ -619,7 +619,8 @@ let ab = { ...a, ...b };
 // 等同于
 let ab = Object.assign({}, a, b);
 ```
-> 扩展运算符和Object.assign，有亮点区别，1、扩展运算符不会对原有对象产生改变，Object.assign会进行改变，2、扩展运算符不能拿到对象的__proto__上的属性，而Object.assign可以。
+> 扩展运算符和Object.assign，有两点区别，1、扩展运算符不会对原有对象产生改变，Object.assign会进行改变，2、扩展运算符不能拿到对象的__proto__上的属性，而Object.assign可以。
+> Object.assign是把做对象合并，把第二个参数后面对象合并到第一个。
 
 
 如果用户自定义的属性，放在扩展运算符后面，则扩展运算符内部的同名属性会被覆盖掉。
